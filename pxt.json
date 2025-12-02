@@ -5,7 +5,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "OLED12864_I2C": "github:xiaoyaochun8/oled12864_i2c_mq#05ca4d6898f3477e2521fd87998ca4e621fb459a"
     },
     "files": [
         "README.md",
@@ -23,5 +24,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
