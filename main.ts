@@ -154,19 +154,19 @@ namespace mqlib {
     //% block="oled眼睛图片 $oledEye"
     export function oledShowEye(oledEye: OledEye): void {
         if (oledEye == OledEye.Po1) {
-            OLED12864_I2C.drawPicBy1024Hex(imVideo1_6)
+            OLED12864_I2C.drawByArr1024(imVideo1_6)
         } else if (oledEye == OledEye.Po2) {
-            OLED12864_I2C.drawPicBy1024Hex(imVideo1_5)
+            OLED12864_I2C.drawByArr1024(imVideo1_5)
         } else if (oledEye == OledEye.Pr1) {
-            OLED12864_I2C.drawPicBy1024Hex(imVideo1_1)
+            OLED12864_I2C.drawByArr1024(imVideo1_1)
         } else if (oledEye == OledEye.Pr2) {
-            OLED12864_I2C.drawPicBy1024Hex(imVideo1_2)
+            OLED12864_I2C.drawByArr1024(imVideo1_2)
         } else if (oledEye == OledEye.Pr3) {
-            OLED12864_I2C.drawPicBy1024Hex(imVideo1_3)
+            OLED12864_I2C.drawByArr1024(imVideo1_3)
         } else if (oledEye == OledEye.Pr4) {
-            OLED12864_I2C.drawPicBy1024Hex(imVideo1_4)
+            OLED12864_I2C.drawByArr1024(imVideo1_4)
         } else if (oledEye == OledEye.Pr5) {
-            OLED12864_I2C.drawPicBy1024Hex(imVideo1_5)
+            OLED12864_I2C.drawByArr1024(imVideo1_5)
         }
     }
     //% subcategory="oled"
@@ -174,19 +174,19 @@ namespace mqlib {
     //% weight=86
     //% block="oled眨眼睛一次动画"
     export function oledPlayEyeAnim(): void {
-        OLED12864_I2C.drawPicBy1024Hex(imVideo1_6);
-        OLED12864_I2C.drawPicBy1024Hex(imVideo1_5);
+        OLED12864_I2C.drawByArr1024(imVideo1_6);
+        OLED12864_I2C.drawByArr1024(imVideo1_5);
     }
     //% subcategory="oled"
     //% group='oled-眼睛'
     //% weight=85
     //% block="oled眼睛转圈一次动画"
     export function oledPlayEyeAnim2(): void {
-        OLED12864_I2C.drawPicBy1024Hex(imVideo1_1);
-        OLED12864_I2C.drawPicBy1024Hex(imVideo1_2);
-        OLED12864_I2C.drawPicBy1024Hex(imVideo1_3);
-        OLED12864_I2C.drawPicBy1024Hex(imVideo1_4);
-        OLED12864_I2C.drawPicBy1024Hex(imVideo1_5);
+        OLED12864_I2C.drawByArr1024(imVideo1_1);
+        OLED12864_I2C.drawByArr1024(imVideo1_2);
+        OLED12864_I2C.drawByArr1024(imVideo1_3);
+        OLED12864_I2C.drawByArr1024(imVideo1_4);
+        OLED12864_I2C.drawByArr1024(imVideo1_5);
     }
     //% subcategory="oled"
     //% group='oled-雪人'
