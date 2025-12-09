@@ -63,7 +63,7 @@ namespace mqlib {
         for (let y = 0; y < 64; y++) {
             for (let x = 0; x < 128; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixel(x, y, 1)
+                    OLED12864_I2C.pixelM(x, y, 1)
                 }
             }
         }
@@ -79,7 +79,7 @@ namespace mqlib {
         for (let y = 0; y < 16; y++) {
             for (let x = 0; x < 16; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixel(x + xStart, y + yStart, 1)
+                    OLED12864_I2C.pixelM(x + xStart, y + yStart, 1)
                 }
             }
         }
@@ -96,7 +96,7 @@ namespace mqlib {
         for (let y = 0; y < 16; y++) {
             for (let x = 0; x < 16; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixel(x * scale, y * scale, 1)
+                    OLED12864_I2C.pixelM(x * scale, y * scale, 1)
                 }
             }
         }
@@ -210,14 +210,18 @@ namespace mqlib {
     //% weight=87
     //% block="oled雪人图片"
     export function oledShowSnowMan(): void {
+        OLED12864_I2C.clear();
         mqlib.oledDrawImgWithPixels12864(imOledAnim4SnowMan);
+        OLED12864_I2C.draw();
     }
     //% subcategory="oled"
     //% group='oled-雪人'
     //% weight=84
     //% block="oled雪人动画"
     export function oledDrawAnim4(): void {
+        OLED12864_I2C.clear();
         mqlib.oledDrawImgWithPixels12864(imOledAnim4SnowMan);
+        OLED12864_I2C.draw();
         let x = 0;
         let y = 0;
         let x2 = 0;
@@ -233,6 +237,7 @@ namespace mqlib {
                 OLED12864_I2C.clear();
                 cnt = 40;
                 mqlib.oledDrawImgWithPixels12864(imOledAnim4SnowMan);
+                OLED12864_I2C.draw();
             }
         })
         basic.forever(function () {
