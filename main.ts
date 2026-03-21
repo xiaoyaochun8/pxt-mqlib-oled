@@ -63,7 +63,7 @@ namespace mqlib {
         for (let y = 0; y < 64; y++) {
             for (let x = 0; x < 128; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixelM(x, y, 1)
+                    OLED12864_I2C.pixel(x, y, 1)
                 }
             }
         }
@@ -79,7 +79,7 @@ namespace mqlib {
         for (let y = 0; y < 16; y++) {
             for (let x = 0; x < 16; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixelM(x + xStart, y + yStart, 1)
+                    OLED12864_I2C.pixel(x + xStart, y + yStart, 1)
                 }
             }
         }
@@ -96,7 +96,7 @@ namespace mqlib {
         for (let y = 0; y < 16; y++) {
             for (let x = 0; x < 16; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixelM(x * scale, y * scale, 1)
+                    OLED12864_I2C.pixel(x * scale, y * scale, 1)
                 }
             }
         }
