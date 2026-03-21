@@ -6,7 +6,7 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "OLED12864_I2C": "github:xiaoyaochun8/oled12864_i2c_mq#3d1e0d8839cab9eb6e9c2abec7d893f3c5c59cbe"
+        "OLED12864_I2C": "github:xiaoyaochun8/oled12864_i2c_mq#fad6f48458c4f53de731a62e9bc81f70863b192e"
     },
     "files": [
         "README.md",
