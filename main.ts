@@ -2,28 +2,29 @@
 * 保留基础函数（画布、pixel/hex模式、橡皮擦）及画图、表情、雪人图片、简单动画
 */
 
-enum OledEye {
-    //% block="眨眼睛1"
-    Po1,
-    //% block="眨眼睛2"
-    Po2,
-    //% block="转圈1"
-    Pr1,
-    //% block="转圈2"
-    Pr2,
-    //% block="转圈3"
-    Pr3,
-    //% block="转圈4"
-    Pr4,
-    //% block="转圈5"
-    Pr5,
-}
-
 /**
  * mqOled blocks
  */
 //% groups=['oled-使用画布画图','oled-橡皮檫','oled-眼睛']
 namespace mqlib {
+
+    enum OledEye {
+        //% block="眨眼睛1"
+        Po1,
+        //% block="眨眼睛2"
+        Po2,
+        //% block="转圈1"
+        Pr1,
+        //% block="转圈2"
+        Pr2,
+        //% block="转圈3"
+        Pr3,
+        //% block="转圈4"
+        Pr4,
+        //% block="转圈5"
+        Pr5,
+    }
+
     /**
      * Create a 128x64 pixel matrix for use as a custom character.
      */
