@@ -74,7 +74,7 @@ namespace mqlib {
      */
     //% subcategory="oled"
     //% group='oled-使用画布画图'
-    //% block="oled画图16x16 $im x $xStart y $yStart"
+    //% block="oled画图16x16 $im 在位置x: $xStart, y $yStart"
     //% weight=99
     export function oledDrawImgWithPixels1616(im: Image, xStart: number = 0, yStart: number = 0): void {
         for (let y = 0; y < 16; y++) {
@@ -106,7 +106,7 @@ namespace mqlib {
     //% subcategory="oled"
     //% group='oled-橡皮檫'
     //% weight=98
-    //% block="oled矩形区域橡皮檫 x $xStart y $yStart 宽度 $width 高度 $height 颜色 $color"
+    //% block="oled矩形区域橡皮檫 在位置x $xStart, y $yStart, 宽度 $width 高度 $height 颜色 $color"
     export function oledDrawRectAreaClean(xStart: number, yStart: number, width: number, height: number, color: number = 0): void {
         OLED12864_I2C.clearRectArea(xStart, yStart, width, height, color)
         OLED12864_I2C.draw();
