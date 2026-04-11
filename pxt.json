@@ -6,7 +6,7 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "OLED12864_I2C": "github:xiaoyaochun8/oled12864_i2c_mq#fad6f48458c4f53de731a62e9bc81f70863b192e"
+        "OLED12864_I2C": "github:xiaoyaochun8/oled12864_i2c_mq#c01e07d80357fbd5361c18e41d55e018477049c3"
     },
     "files": [
         "README.md",
@@ -18,7 +18,7 @@
     ],
     "public": true,
     "targetVersions": {
-        "target": "8.0.18",
+        "target": "8.0.21",
         "targetId": "microbit"
     },
     "supportedTargets": [
