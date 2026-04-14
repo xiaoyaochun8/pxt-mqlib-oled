@@ -8,7 +8,7 @@
 //% groups=['oled-使用画布画图','oled-橡皮檫','oled-眼睛']
 namespace mqlib {
 
-    enum OledEye {
+    export enum OledEye {
         //% block="眨眼睛1"
         Po1,
         //% block="眨眼睛2"
