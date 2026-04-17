@@ -5,7 +5,7 @@
 /**
  * mqOled blocks
  */
-//% groups=['oled-使用画布画图','oled-橡皮檫','oled-眼睛']
+//% groups=['oled-使用画布画图','oled-眼睛']
 namespace mqlib {
 
     export enum OledEye {
@@ -64,10 +64,11 @@ namespace mqlib {
         for (let y = 0; y < 64; y++) {
             for (let x = 0; x < 128; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixel(x, y, 1)
+                    OLED12864_I2C.setPixelData(x, y, 1)
                 }
             }
         }
+        OLED12864_I2C.draw()
     }
     /**
      * Create a 16x16 pixel matrix for use as a custom character.
@@ -80,10 +81,11 @@ namespace mqlib {
         for (let y = 0; y < 16; y++) {
             for (let x = 0; x < 16; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixel(x + xStart, y + yStart, 1)
+                    OLED12864_I2C.setPixelData(x + xStart, y + yStart, 1)
                 }
             }
         }
+        OLED12864_I2C.draw()
     }
     /**
      * Create a 16x16 pixel matrix for use as a custom character.
@@ -97,10 +99,11 @@ namespace mqlib {
         for (let y = 0; y < 16; y++) {
             for (let x = 0; x < 16; x++) {
                 if (im.pixel(x, y)) {
-                    OLED12864_I2C.pixel(x * scale, y * scale, 1)
+                    OLED12864_I2C.setPixelData(x * scale, y * scale, 1)
                 }
             }
         }
+        OLED12864_I2C.draw()
     }
 
     //% subcategory="oled"
@@ -109,7 +112,7 @@ namespace mqlib {
     //% block="oled矩形区域橡皮檫 在位置x $xStart, y $yStart, 宽度 $width 高度 $height 颜色 $color"
     export function oledDrawRectAreaClean(xStart: number, yStart: number, width: number, height: number, color: number = 0): void {
         OLED12864_I2C.clearRectArea(xStart, yStart, width, height, color)
-        OLED12864_I2C.draw();
+        OLED12864_I2C.draw()
     }
 
     /**
@@ -141,19 +144,19 @@ namespace mqlib {
     //% weight=86
     //% block="oled眨眼睛一次动画"
     export function oledPlayEyeAnim(): void {
-        OLED12864_I2C.drawByArr1024(imVideo1_6);
-        OLED12864_I2C.drawByArr1024(imVideo1_5);
+        OLED12864_I2C.drawByArr1024(imVideo1_6)
+        OLED12864_I2C.drawByArr1024(imVideo1_5)
     }
     //% subcategory="oled"
     //% group='oled-眼睛'
     //% weight=85
     //% block="oled眼睛转圈一次动画"
     export function oledPlayEyeAnim2(): void {
-        OLED12864_I2C.drawByArr1024(imVideo1_1);
-        OLED12864_I2C.drawByArr1024(imVideo1_2);
-        OLED12864_I2C.drawByArr1024(imVideo1_3);
-        OLED12864_I2C.drawByArr1024(imVideo1_4);
-        OLED12864_I2C.drawByArr1024(imVideo1_5);
+        OLED12864_I2C.drawByArr1024(imVideo1_1)
+        OLED12864_I2C.drawByArr1024(imVideo1_2)
+        OLED12864_I2C.drawByArr1024(imVideo1_3)
+        OLED12864_I2C.drawByArr1024(imVideo1_4)
+        OLED12864_I2C.drawByArr1024(imVideo1_5)
     }
 
     //eyes
